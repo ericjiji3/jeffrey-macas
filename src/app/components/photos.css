@@ -1,3 +1,35 @@
 .photosContainer{
     display: block;
+    position: relative;
+    height: 100%;
+}
+.photosContainer .contentContainer{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+.photosContainer .carousel .slide{
+    min-width: 100%!important;
+}
+.photosContainer .carousel .slide .slideContainer{
+    width: fit-content!important;
+}
+.photosContainer .slideContainer img{
+    height: 100%;
+    object-fit: cover;
+}
+.photosContainer .carousel .thumbs-wrapper{
+    margin: 5px 0 0 0;
+}
+.photosContainer .carousel .thumbs{
+    padding: 0;
+    margin: 0;
+}
+.photosContainer .carousel .thumbs img{
+    height: 100%!important;
+}
+.photosContainer .carousel .thumbs .thumb{
+    margin-right: 0!important;
+    margin: 0 5px;
 }

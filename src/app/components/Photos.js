@@ -1,5 +1,5 @@
 import Image from 'next/image'
-import styles from './photos.css'
+import './photos.css'
 import Img1 from '../../../public/images/pic1.jpg'
 import Img2 from '../../../public/images/pic2.jpg'
 import Img3 from '../../../public/images/pic3.jpg'
@@ -7,46 +7,50 @@ import Img4 from '../../../public/images/pic4.jpg'
 import Img5 from '../../../public/images/pic5.jpg'
 import Img6 from '../../../public/images/pic6.jpg'
 import Img7 from '../../../public/images/pic7.jpg'
-import { register } from 'swiper/element/bundle'
-
-import {useRef, useState, useEffect} from 'react'
-import SwiperCore, { Lazy } from "swiper"
-SwiperCore.use([Lazy])
-
-register();
+import "react-responsive-carousel/lib/styles/carousel.min.css"; // requires a loader
+import { Carousel } from 'react-responsive-carousel';
 
 export default function Photos() {
-  const swiperElRef = useRef(null);
 
-  useEffect(() => {
-    // listen for Swiper events using addEventListener
-    swiperElRef.current.addEventListener('swiperprogress', (e) => {
-      const [swiper, progress] = e.detail;
-      console.log(progress);
-    });
-
-    swiperElRef.current.addEventListener('swiperslidechange', (e) => {
-      console.log('slide changed');
-    });
-  }, []);
   return (
     <div className="photosContainer">
-      <swiper-container ref={swiperElRef}
-      slides-per-view="1"
-      navigation="true"
-      pagination="true"
-      centered-slides="true"
-      centered-slides-bounds="true"
-      loop="true"
-      >
-        <swiper-slide><Image loading="eager" src={Img1} width={250}/></swiper-slide>
-        <swiper-slide><Image loading="eager"src={Img2} width={250}/></swiper-slide>
-        <swiper-slide><Image loading="eager" src={Img3} width={250}/></swiper-slide>
-        <swiper-slide><Image loading="eager" src={Img4} width={250}/></swiper-slide>
-        <swiper-slide><Image loading="eager" src={Img5} width={250}/></swiper-slide>
-        <swiper-slide><Image loading="eager" src={Img6} width={250}/></swiper-slide>
-        <swiper-slide><Image loading="eager" src={Img7} width={250}/></swiper-slide>
-      </swiper-container>
+      <div className="contentContainer">
+        <Carousel infiniteLoop="true" showIndicators="false" width={300} renderThumbs={() => (
+          [<Image src={Img1} width={300} height={100} alt="oops" key={0}/>,
+          <Image src={Img2} width={300} height={100} alt="oops" key={1}/>,
+          <Image src={Img3} width={300} height={100} alt="oops" key={2}/>,
+          <Image src={Img4} width={300} height={100} alt="oops" key={3}/>,
+          <Image src={Img5} width={300} height={100} alt="oops" key={4}/>,
+          <Image src={Img6} width={300} height={100} alt="oops" key={5}/>,
+          <Image src={Img7} width={300} height={100} alt="oops" key={6}/>]
+        )
+        }
+        thumbWidth={37.5}
+        >
+            <div className="slideContainer">
+              <Image src={Img1} width={300} height={100} alt="oops"/>
+            </div>
+            <div className="slideContainer">
+              <Image src={Img2} width={300} height={100} alt="oops"/>
+            </div>
+            <div className="slideContainer">
+              <Image src={Img3} width={300} height={100} alt="oops"/>
+            </div>
+            <div className="slideContainer">
+              <Image src={Img4} width={300} height={100} alt="oops"/>
+            </div>
+            <div className="slideContainer">
+              <Image src={Img5} width={300} height={100} alt="oops"/>
+            </div>
+            <div className="slideContainer">
+              <Image src={Img6} width={300} height={100} alt="oops"/>
+            </div>
+            <div className="slideContainer">
+              <Image src={Img7} width={300} height={100} alt="oops"/>
+            </div>
+        </Carousel>
+      </div>
+      
     </div>
   )
 }
