@@ -1,95 +1,87 @@
+"use client"
 import Image from 'next/image'
 import styles from './page.module.css'
+import About from './components/About'
+import Photos from './components/Photos'
+import Events from './components/Events'
+import Videos from './components/Videos'
+import Logo from '../../public/logo.png'
+
+import {useState, useEffect} from 'react'
+
 
 export default function Home() {
+  const [showPhotos, setShowPhotos] = useState(true);
+  const [showEvents, setShowEvents] = useState(false);
+  const [showVideos, setShowVideos] = useState(false);
+  const [showAbout, setShowAbout] = useState(false);
+
+  const togglePhotos = (e) =>{
+    e.preventDefault();
+    setShowPhotos(true);
+    setShowEvents(false);
+    setShowVideos(false);
+    setShowAbout(false);
+    console.log('true');
+  }
+
+  const toggleEvents = (e) =>{
+    e.preventDefault();
+    setShowPhotos(false);
+    setShowEvents(true);
+    setShowVideos(false);
+    setShowAbout(false);
+  }
+
+  const toggleVideos = (e) =>{
+    e.preventDefault();
+    setShowPhotos(false);
+    setShowEvents(false);
+    setShowVideos(true);
+    setShowAbout(false);
+  }
+
+  const toggleAbout = (e) =>{
+    e.preventDefault();
+    setShowPhotos(false);
+    setShowEvents(false);
+    setShowVideos(false);
+    setShowAbout(true);
+  }
+
   return (
-    <main className={styles.main}>
-      <div className={styles.description}>
-        <p>
-          Get started by editing&nbsp;
-          <code className={styles.code}>src/app/page.js</code>
-        </p>
-        <div>
-          <a
-            href="https://vercel.com?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            By{' '}
-            <Image
-              src="/vercel.svg"
-              alt="Vercel Logo"
-              className={styles.vercelLogo}
-              width={100}
-              height={24}
-              priority
-            />
-          </a>
+    <div className={styles.homeContainer}>
+      <div className={styles.navContainer}>
+        <div className={styles.imageContainer}>
+          <Image
+            src={Logo}
+            width={150}
+          />
+          
+        </div>
+        <ul className={styles.navItems}>
+          <li className={styles.navItem} onClick={(e) => togglePhotos(e)}>Home</li>
+          <li className={styles.navItem} onClick={(e) => toggleEvents(e)}>Events</li>
+          <li className={styles.navItem} onClick={(e) => toggleVideos(e)}>Videos</li>
+          <li className={styles.navItem} onClick={(e) => toggleAbout(e)}>About</li>
+        </ul>
+      </div>
+      <div className={styles.content}>
+        <div className={showPhotos ? `${styles.compContainer} ${styles.active}` : `${styles.compContainer}`}>
+          <Photos/>
+        </div>
+        <div className={showEvents ? `${styles.compContainer} ${styles.active}` : `${styles.compContainer}`}>
+          <Events/>
+        </div>
+        <div className={showVideos ? `${styles.compContainer} ${styles.active}` : `${styles.compContainer}`}>
+          <Videos/>
+        </div>
+        <div className={showAbout ? `${styles.compContainer} ${styles.active}` : `${styles.compContainer}`}>
+          <About/>
         </div>
       </div>
+      
 
-      <div className={styles.center}>
-        <Image
-          className={styles.logo}
-          src="/next.svg"
-          alt="Next.js Logo"
-          width={180}
-          height={37}
-          priority
-        />
-      </div>
-
-      <div className={styles.grid}>
-        <a
-          href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className={styles.card}
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2>
-            Docs <span>-&gt;</span>
-          </h2>
-          <p>Find in-depth information about Next.js features and API.</p>
-        </a>
-
-        <a
-          href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className={styles.card}
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2>
-            Learn <span>-&gt;</span>
-          </h2>
-          <p>Learn about Next.js in an interactive course with&nbsp;quizzes!</p>
-        </a>
-
-        <a
-          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className={styles.card}
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2>
-            Templates <span>-&gt;</span>
-          </h2>
-          <p>Explore starter templates for Next.js.</p>
-        </a>
-
-        <a
-          href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className={styles.card}
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2>
-            Deploy <span>-&gt;</span>
-          </h2>
-          <p>
-            Instantly deploy your Next.js site to a shareable URL with Vercel.
-          </p>
-        </a>
-      </div>
-    </main>
+    </div>
   )
 }
