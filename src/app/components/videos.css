@@ -1,19 +1,22 @@
 .videosContainer{
     display: flex;
     position: relative;
-    height: 100%;
-    justify-content: center;
-    
+    height: calc(100% - 100px);
+    /* justify-content: center; */
+    flex-wrap: wrap;
+    top: 50%;
+    transform: translateY(-50%);
 }
 .videosContainer .videoContainer{
-    width: 30%;
-    height: 100%;
-    margin: 0px 15px;
-    display: flex;
-    align-items: center;
+   flex: 45% 0;
+   margin-bottom: 15px;
+   filter: drop-shadow(10px 10px 0px var(--secondary-color));
+}
+.videosContainer .videoContainer:nth-child(odd){
+    margin-right: 15px;
 }
 .videosContainer .videoContainer iframe{
     width: 100%;
-    height: 90%;
+    height:100%;
     
 }

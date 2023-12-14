@@ -14,7 +14,7 @@ export default function About() {
           width="100%"
           alt="oops"
         />
-        <div>
+        <div className="bio">
             Jeffrey Macas is an up-and-coming comedian based in Houston, TX.
             Jeffrey has headlined sold-out shows in Austin and Houston, and has performed all over Los Angeles (Comedy Store, Ice House, Knitting Factory).
             Outside of stand-up, Jeffrey has an improv background from the Upright Citizens Brigade & the Groundlings, as well as acting training from Anthony Meindl&apos;s Acting Workshop.

@@ -15,38 +15,38 @@ export default function Photos() {
   return (
     <div className="photosContainer">
       <div className="contentContainer">
-        <Carousel infiniteLoop="true" showIndicators="false" width={300} renderThumbs={() => (
-          [<Image src={Img1} width={300} height={100} alt="oops" key={0}/>,
-          <Image src={Img2} width={300} height={100} alt="oops" key={1}/>,
-          <Image src={Img3} width={300} height={100} alt="oops" key={2}/>,
-          <Image src={Img4} width={300} height={100} alt="oops" key={3}/>,
-          <Image src={Img5} width={300} height={100} alt="oops" key={4}/>,
-          <Image src={Img6} width={300} height={100} alt="oops" key={5}/>,
-          <Image src={Img7} width={300} height={100} alt="oops" key={6}/>]
+        <Carousel className="myCarousel" infiniteLoop="true" showIndicators="false" width={400} renderThumbs={() => (
+          [<Image src={Img1} width={400} height={100} alt="oops" key={0}/>,
+          <Image src={Img2} width={400} height={100} alt="oops" key={1}/>,
+          <Image src={Img3} width={400} height={100} alt="oops" key={2}/>,
+          <Image src={Img4} width={400} height={100} alt="oops" key={3}/>,
+          <Image src={Img5} width={400} height={100} alt="oops" key={4}/>,
+          <Image src={Img6} width={400} height={100} alt="oops" key={5}/>,
+          <Image src={Img7} width={400} height={100} alt="oops" key={6}/>]
         )
         }
         thumbWidth={37.5}
         >
             <div className="slideContainer">
-              <Image src={Img1} width={300} height={100} alt="oops"/>
+              <Image src={Img1} width={400} height={100} alt="oops"/>
             </div>
             <div className="slideContainer">
-              <Image src={Img2} width={300} height={100} alt="oops"/>
+              <Image src={Img2} width={400} height={100} alt="oops"/>
             </div>
             <div className="slideContainer">
-              <Image src={Img3} width={300} height={100} alt="oops"/>
+              <Image src={Img3} width={400} height={100} alt="oops"/>
             </div>
             <div className="slideContainer">
-              <Image src={Img4} width={300} height={100} alt="oops"/>
+              <Image src={Img4} width={400} height={100} alt="oops"/>
             </div>
             <div className="slideContainer">
-              <Image src={Img5} width={300} height={100} alt="oops"/>
+              <Image src={Img5} width={400} height={100} alt="oops"/>
             </div>
             <div className="slideContainer">
-              <Image src={Img6} width={300} height={100} alt="oops"/>
+              <Image src={Img6} width={400} height={100} alt="oops"/>
             </div>
             <div className="slideContainer">
-              <Image src={Img7} width={300} height={100} alt="oops"/>
+              <Image src={Img7} width={400} height={100} alt="oops"/>
             </div>
         </Carousel>
       </div>

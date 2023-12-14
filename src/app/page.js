@@ -5,7 +5,7 @@ import About from './components/About'
 import Photos from './components/Photos'
 import Events from './components/Events'
 import Videos from './components/Videos'
-import Logo from '../../public/logo.PNG'
+import Logo from '../../public/jefferymacas.gif'
 
 import {useState, useEffect} from 'react'
 
@@ -55,7 +55,7 @@ export default function Home() {
         <div className={styles.imageContainer}>
           <Image
             src={Logo}
-            width={150}
+            width={300}
             alt="oops"
           />
           

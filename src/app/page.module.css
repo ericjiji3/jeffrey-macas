@@ -23,7 +23,7 @@
   margin: 5px;
   background-color: var(--secondary-color);
   color: var(--primary-color);
-
+  width: 75%;
 }
 
 
@@ -45,4 +45,12 @@
   top: 0%;
   transition: all 1s linear;
   
+}
+@media(max-width: 1300px){
+  .homeContainer .navContainer{
+    width: 20%;
+  }
+  .homeContainer .content{
+    width: 80%;
+  }
 }
