@@ -10,7 +10,7 @@
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  padding: 100px 50px;
+  padding: 50px;
 }
 .homeContainer .navContainer .navItems{
   list-style: none;
@@ -22,6 +22,8 @@
   padding: 10px;
   margin: 5px;
   background-color: var(--secondary-color);
+  color: var(--primary-color);
+
 }
 
 

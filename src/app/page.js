@@ -56,14 +56,15 @@ export default function Home() {
           <Image
             src={Logo}
             width={150}
+            alt="oops"
           />
           
         </div>
         <ul className={styles.navItems}>
-          <li className={styles.navItem} onClick={(e) => togglePhotos(e)}>Home</li>
-          <li className={styles.navItem} onClick={(e) => toggleEvents(e)}>Events</li>
-          <li className={styles.navItem} onClick={(e) => toggleVideos(e)}>Videos</li>
-          <li className={styles.navItem} onClick={(e) => toggleAbout(e)}>About</li>
+          <li className={styles.navItem} onClick={(e) => togglePhotos(e)}><h4>Home</h4></li>
+          <li className={styles.navItem} onClick={(e) => toggleEvents(e)}><h4>Events</h4></li>
+          <li className={styles.navItem} onClick={(e) => toggleVideos(e)}><h4>Videos</h4></li>
+          <li className={styles.navItem} onClick={(e) => toggleAbout(e)}><h4>About</h4></li>
         </ul>
       </div>
       <div className={styles.content}>

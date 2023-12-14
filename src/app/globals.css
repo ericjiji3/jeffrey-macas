@@ -2,6 +2,29 @@
   --primary-color: #D7CE58;
   --secondary-color: #21601D;
 }
+@font-face {
+  font-family: 'Helvetica';
+  font-style: italic;
+  font-weight: normal;
+  src: url('/fonts/Helvetica/Helvetica-Bold-Condensed-Oblique.otf') format('opentype');
+}
+@font-face {
+  font-family: 'Helvetica';
+  font-style: normal;
+  font-weight: normal;
+  src: url('/fonts/Helvetica/Helvetica-Bold-Condensed.otf') format('opentype');
+}
+@font-face {
+  font-family: 'Variex';
+  font-style: normal;
+  font-weight: normal;
+  src: url('/fonts/Variex-Regular.ttf') format('truetype');
+}
 html, body{
+  margin: 0;
+  font-family: 'Helvetica'!important;
+}
+h1,h2,h3,h4,h5,h6{
+  font-family: 'Variex';
   margin: 0;
 }
