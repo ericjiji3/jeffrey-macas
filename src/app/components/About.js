@@ -12,6 +12,7 @@ export default function About() {
         <Image
           src={Profile}
           width="100%"
+          alt="oops"
         />
         <div>
             Jeffrey Macas is an up-and-coming comedian based in Houston, TX.
