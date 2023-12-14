@@ -1,0 +1,19 @@
+.videosContainer{
+    display: flex;
+    position: relative;
+    height: 100%;
+    justify-content: center;
+    
+}
+.videosContainer .videoContainer{
+    width: 30%;
+    height: 100%;
+    margin: 0px 15px;
+    display: flex;
+    align-items: center;
+}
+.videosContainer .videoContainer iframe{
+    width: 100%;
+    height: 90%;
+    
+}
