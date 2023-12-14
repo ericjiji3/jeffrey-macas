@@ -5,7 +5,7 @@ import About from './components/About'
 import Photos from './components/Photos'
 import Events from './components/Events'
 import Videos from './components/Videos'
-import Logo from '../../public/logo.png'
+import Logo from '../../public/logo.PNG'
 
 import {useState, useEffect} from 'react'
 
