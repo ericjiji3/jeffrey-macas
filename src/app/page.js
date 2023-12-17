@@ -9,6 +9,9 @@ import Logo from '../../public/jefferymacas.gif'
 import Face1 from '../../public/faces/face1.png'
 import Face2 from '../../public/faces/face2.png'
 import Face3 from '../../public/faces/face3.png'
+import Youtube from '../../public/youtube.png'
+import Tiktok from '../../public/tiktok.png'
+import Instagram from '../../public/instagram.png'
 import {useState, useEffect} from 'react'
 
 
@@ -104,9 +107,34 @@ export default function Home() {
         </div>
         <ul className={styles.navItems}>
           <li className={styles.navItem} onClick={(e) => togglePhotos(e)}><h4>Home</h4></li>
-          <li className={styles.navItem} onClick={(e) => toggleEvents(e)}><h4>Events</h4></li>
+          <li className={styles.navItem} onClick={(e) => toggleEvents(e)}><h4>Tickets</h4></li>
           <li className={styles.navItem} onClick={(e) => toggleVideos(e)}><h4>Videos</h4></li>
           <li className={styles.navItem} onClick={(e) => toggleAbout(e)}><h4>About</h4></li>
+          <li className={styles.socialsContainer}>
+            <div className={styles.socials}>
+              <a href="https://www.instagram.com/jeffreymacass/">
+                <Image
+                  src={Instagram}
+                  width={30}
+                  alt="oops"
+                />
+              </a>
+              <a href="https://www.tiktok.com/@jeffreymacas">
+                <Image
+                  src={Tiktok}
+                  width={30}
+                  alt="oops"
+                />
+              </a>
+              <a href="https://www.youtube.com/@JeffreyMacass">
+                <Image
+                  src={Youtube}
+                  width={30}
+                  alt="oops"
+                />
+              </a>   
+            </div>
+          </li>
         </ul>
       </div>
       <div className={styles.content}>

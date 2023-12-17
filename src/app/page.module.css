@@ -124,8 +124,16 @@
   border-radius: 2px;
   width: 75%;
 }
+.pageContainer .navContainer .navItems .navItem:hover{
+  cursor: pointer;
+}
 .pageContainer .navContainer .navItems .navItem h4{
   color: var(--primary-color);
+}
+
+.pageContainer .navContainer .navItems .socials img{
+  margin: 0 2.5px;
+  filter: hue(var(--secondary-color));
 }
 
 .pageContainer .content{
@@ -201,6 +209,8 @@
   }
   .pageContainer .navContainer .navItems{
     display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
   }
   .pageContainer .navContainer .navItems .navItem{
     display: block;
@@ -208,7 +218,12 @@
     margin: 5px;
     background-color: var(--secondary-color);
     text-align: center;
-    width: 75%;
+    width: 17%;
+  }
+  .pageContainer .navContainer .navItems .socialsContainer{
+    width: 100%;
+    text-align: center;
+    margin-top: 5px;
   }
   .pageContainer .content{
     width: 100%;

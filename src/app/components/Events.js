@@ -33,7 +33,7 @@ export default function Events() {
           </div>
           <div className="col eventDate">
             <h2 className="date">My Name Is Jeff</h2>
-            <span className="date"><b>29 December 2023</b></span>
+            <span className="date"><b>30 December 2023</b></span>
           </div>
           <div className="col eventLoc">
             <h3 className="location">Houston, TX</h3>
