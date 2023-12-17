@@ -48,6 +48,7 @@
     }
     .photosContainer .slideContainer img{
         width: 250px!important;
+        height: 350px;
     }
     .photosContainer .carousel .thumbs .thumb{
         width: 30px!important;
