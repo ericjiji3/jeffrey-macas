@@ -21,7 +21,7 @@ export default function Events() {
             <span>Houston Vintage Truck Club</span>
           </div>
           <div className="col">
-            <a className="button" href="https://www.eventbrite.com/e/my-name-is-jeff-dec-29th-friday-tickets-771017824067?aff=ebdshpsearchautocomplete"><h4>Buy Tickets</h4></a>
+            <a className="button" href="https://www.eventbrite.com/e/my-name-is-jeff-dec-29th-friday-tickets-771017824067?aff=ebdshpsearchautocomplete"><h4>Get Tickets</h4></a>
           </div>
       </div>
       <div className="eventContainer">
@@ -40,7 +40,7 @@ export default function Events() {
             <span>Houston Vintage Truck Club</span>
           </div>
           <div className="col">
-            <a className="button" href="https://www.eventbrite.com/e/my-name-is-jeff-dec-29th-friday-tickets-771017824067?aff=ebdshpsearchautocomplete"><h4>Buy Tickets</h4></a>
+            <a className="button" href="https://www.eventbrite.com/e/my-name-is-jeff-dec-29th-friday-tickets-771017824067?aff=ebdshpsearchautocomplete"><h4>Get Tickets</h4></a>
           </div>
       </div>
     </div>

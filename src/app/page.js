@@ -62,7 +62,7 @@ export default function Home() {
         </div>
         <ul className={styles.navItems}>
           <li className={styles.navItem} onClick={(e) => togglePhotos(e)}><h4>Home</h4></li>
-          <li className={styles.navItem} onClick={(e) => toggleEvents(e)}><h4>Events</h4></li>
+          <li className={styles.navItem} onClick={(e) => toggleEvents(e)}><h4>Shows</h4></li>
           <li className={styles.navItem} onClick={(e) => toggleVideos(e)}><h4>Videos</h4></li>
           <li className={styles.navItem} onClick={(e) => toggleAbout(e)}><h4>About</h4></li>
         </ul>

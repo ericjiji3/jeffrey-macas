@@ -25,7 +25,9 @@
   color: var(--primary-color);
   width: 75%;
 }
-
+.homeContainer .navContainer .navItems .navItem:hover{
+  cursor: pointer;
+}
 
 .homeContainer .content{
   width: 70%;
