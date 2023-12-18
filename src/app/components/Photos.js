@@ -7,9 +7,9 @@ import Img4 from '../../../public/images/pic4.jpg'
 import Img5 from '../../../public/images/pic5.jpg'
 import Img6 from '../../../public/images/pic6.jpg'
 import Img7 from '../../../public/images/pic7.jpg'
-import "react-responsive-carousel/lib/styles/carousel.min.css"; // requires a loader
-import { Carousel } from 'react-responsive-carousel';
 
+import { Carousel } from 'react-responsive-carousel';
+import "react-responsive-carousel/lib/styles/carousel.min.css"; // requires a loader
 export default function Photos() {
 
   return (

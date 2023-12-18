@@ -6,7 +6,12 @@ import Photos from './components/Photos'
 import Events from './components/Events'
 import Videos from './components/Videos'
 import Logo from '../../public/jefferymacas.gif'
-
+import Face1 from '../../public/faces/face1.png'
+import Face2 from '../../public/faces/face2.png'
+import Face3 from '../../public/faces/face3.png'
+import Youtube from '../../public/youtube.png'
+import Tiktok from '../../public/tiktok.png'
+import Instagram from '../../public/instagram.png'
 import {useState, useEffect} from 'react'
 
 
@@ -15,6 +20,7 @@ export default function Home() {
   const [showEvents, setShowEvents] = useState(false);
   const [showVideos, setShowVideos] = useState(false);
   const [showAbout, setShowAbout] = useState(false);
+  const[showIntro, setShowIntro] = useState(true);
 
   const togglePhotos = (e) =>{
     e.preventDefault();
@@ -49,9 +55,48 @@ export default function Home() {
     setShowAbout(true);
   }
 
+  const toggleIntro = (e) => {
+    e.preventDefault();
+    setShowIntro(false);
+  }
+
   return (
-    <div className={styles.homeContainer}>
-      <div className={styles.navContainer}>
+    <div className={styles.pageContainer}>
+      <div className={showIntro ? `${styles.introContainer} ${styles.active}` : `${styles.introContainer}`} onClick={(e) => toggleIntro(e)}>
+        <div className={styles.faces}>
+          <div className={styles.face1}>
+            <Image
+              src={Face1}
+              width={300}
+              alt="oops"
+            />
+          </div>
+          <div className={styles.face2}>
+            <Image
+              src={Face2}
+              width={350}
+              alt="oops"
+            />
+          </div>
+          <div className={styles.face3}>
+            <Image
+              src={Face3}
+              width={300}
+              alt="oops"
+            />
+          </div>
+        </div>
+        <div className={styles.imageContainer}>
+          <Image
+            src={Logo}
+            width={300}
+            alt="oops"
+          />
+          <h2>Click to Enter</h2>
+        </div>
+      </div>
+      <div className={showIntro ? `${styles.homeContainer}` : `${styles.homeContainer}  ${styles.active}`}>
+        <div className={styles.navContainer}>
         <div className={styles.imageContainer}>
           <Image
             src={Logo}
@@ -62,16 +107,41 @@ export default function Home() {
         </div>
         <ul className={styles.navItems}>
           <li className={styles.navItem} onClick={(e) => togglePhotos(e)}><h4>Home</h4></li>
-          <li className={styles.navItem} onClick={(e) => toggleEvents(e)}><h4>Shows</h4></li>
+          <li className={styles.navItem} onClick={(e) => toggleEvents(e)}><h4>Events</h4></li>
           <li className={styles.navItem} onClick={(e) => toggleVideos(e)}><h4>Videos</h4></li>
           <li className={styles.navItem} onClick={(e) => toggleAbout(e)}><h4>About</h4></li>
+          <li className={styles.socialsContainer}>
+            <div className={styles.socials}>
+              <a href="https://www.instagram.com/jeffreymacass/">
+                <Image
+                  src={Instagram}
+                  width={30}
+                  alt="oops"
+                />
+              </a>
+              <a href="https://www.tiktok.com/@jeffreymacas">
+                <Image
+                  src={Tiktok}
+                  width={30}
+                  alt="oops"
+                />
+              </a>
+              <a href="https://www.youtube.com/@JeffreyMacass">
+                <Image
+                  src={Youtube}
+                  width={30}
+                  alt="oops"
+                />
+              </a>   
+            </div>
+          </li>
         </ul>
       </div>
       <div className={styles.content}>
         <div className={showPhotos ? `${styles.compContainer} ${styles.active}` : `${styles.compContainer}`}>
           <Photos/>
         </div>
-        <div className={showEvents ? `${styles.compContainer} ${styles.active}` : `${styles.compContainer}`}>
+        <div className={showEvents ? `${styles.compContainer} ${styles.eventsContainer} ${styles.active}` : `${styles.compContainer}`}>
           <Events/>
         </div>
         <div className={showVideos ? `${styles.compContainer} ${styles.active}` : `${styles.compContainer}`}>
@@ -81,6 +151,8 @@ export default function Home() {
           <About/>
         </div>
       </div>
+      </div>
+      
       
 
     </div>

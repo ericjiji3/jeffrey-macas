@@ -33,6 +33,12 @@
     width: 100%;
     line-height: 2em;
 }
-@media(max-width: 1300px){
-
+@media(max-width: 900px){
+    .aboutContainer{
+        height: calc(100% - 100px);
+        position: relative;
+        top: unset;
+        transform: unset;
+        padding: 25px;
+    }
 }

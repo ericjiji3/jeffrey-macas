@@ -48,8 +48,27 @@
     }
     .photosContainer .slideContainer img{
         width: 250px!important;
+        height: 350px;
     }
     .photosContainer .carousel .thumbs .thumb{
         width: 30px!important;
     }
+}
+@media(max-width: 900px){
+    .photosContainer{
+        height: fit-content;
+        padding: 50px 0;
+    }
+    .photosContainer .contentContainer{
+        position: relative;
+        top: unset;
+        left: unset;
+        transform: unset;
+        filter: drop-shadow(10px 10px 0px var(--secondary-color));
+    }
+    .carousel.carousel-slider{
+        margin: 0 auto!important;
+        height: 350px;
+    }
+    
 }

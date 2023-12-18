@@ -20,3 +20,26 @@
     height:100%;
     
 }
+@media(max-width: 900px){
+    .videosContainer{
+        display: flex;
+        position: relative;
+        height: calc(100% - 100px);
+        /* justify-content: center; */
+        flex-wrap: wrap;
+        top: 0%;
+        transform: unset;
+        justify-content: center;
+        padding: 25px;
+    }
+    .videosContainer .videoContainer{
+        flex: 100% 0;
+        margin-bottom: 25px;
+     }
+     .videosContainer .videoContainer iframe{
+        height: 250px;
+     }
+     .videosContainer .videoContainer:nth-child(odd){
+        margin-right: 0px;
+    }
+}

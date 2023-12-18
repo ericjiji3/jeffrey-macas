@@ -4,7 +4,6 @@
     flex-direction: column;
     height: 100%;
     align-items: center;
-
 }
 .eventsContainer .eventContainer{
     display: flex;
@@ -35,10 +34,12 @@
     margin: 0;
     display: block;
     font-family: 'Helvetica';
+    color: #000000;
 }
 .eventsContainer .eventContainer .col .location{
     margin: 0px 0 5px;
     font-family: 'Helvetica';
+    color: #000000;
 }
 .eventsContainer .eventContainer .col .button{
     display: block;
@@ -48,4 +49,39 @@
     text-align: center;
     padding: 10px;
     background-color: var(--secondary-color);
+}
+.eventsContainer .eventContainer .col .button h4{
+    color: var(--primary-color);
+}
+@media(max-width: 900px){
+    .eventsContainer{
+        padding: 25px;
+    }
+    .eventsContainer .eventContainer{
+        flex-wrap: wrap;
+        align-items: baseline;
+    }
+    .eventsContainer .eventContainer .col{
+        padding: 0;
+        width: 30%;
+    }
+    .eventsContainer .eventContainer .col .location{
+        margin: 0;
+    }
+    .eventsContainer .eventContainer .col:first-child{
+        width: 100%;
+        margin-bottom: 5px;
+    }
+}
+@media(max-width: 500px){
+    .eventsContainer .eventContainer .eventDate{
+        width: 50%;
+    }
+    .eventsContainer .eventContainer .eventLoc{
+        width: 50%;
+    }
+    .eventsContainer .eventContainer .col:last-child{
+        width: 100%;
+        margin-top: 5px;
+    }
 }

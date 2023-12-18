@@ -12,11 +12,11 @@ export default function Events() {
               alt="oops"
             />
           </div>
-          <div className="col">
+          <div className="col eventDate">
             <h2 className="date">My Name Is Jeff</h2>
             <span><b>29 December 2023</b></span>
           </div>
-          <div className="col">
+          <div className="col eventLoc">
             <h3 className="location">Houston, TX</h3>
             <span>Houston Vintage Truck Club</span>
           </div>
@@ -31,11 +31,11 @@ export default function Events() {
               alt="oops"
             />
           </div>
-          <div className="col">
+          <div className="col eventDate">
             <h2 className="date">My Name Is Jeff</h2>
-            <span className="date"><b>29 December 2023</b></span>
+            <span className="date"><b>30 December 2023</b></span>
           </div>
-          <div className="col">
+          <div className="col eventLoc">
             <h3 className="location">Houston, TX</h3>
             <span>Houston Vintage Truck Club</span>
           </div>
